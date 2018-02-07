@@ -1,0 +1,53 @@
+{
+  "name": "jbh-control-tower-test",
+  "version": "1.2.0",
+  "description": "Tests for control tower with WebdriverIO and typescript",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "scripts": {
+    "kill": "TASKKILL /F /IM 2.33-x64-chromedriver & TASKKILL /F /IM 0.19.0-x64-geckodriver",
+    "e2e": "wdio ./config/wdio/wdio.conf.js",
+    "e2e:local": "wdio ./config/wdio/wdio.local.conf.js",
+    "e2e:headless": "SET HEADLESS=true && npm run e2e",
+    "e2e:local:headless": "SET HEADLESS=true && npm run e2e:local",
+    "e2e:test:headless": "SET NODE_ENV=test&& SET HEADLESS=true && wdio ./config/wdio/wdio.test.conf.js",
+    "e2e:pilot": "SET NODE_ENV=pilot&& wdio ./config/wdio/wdio.pilot.conf.js",
+    "e2e:pilot:headless": "SET NODE_ENV=pilot&& SET HEADLESS=true && wdio ./config/wdio/wdio.pilot.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tfs-prd.jbhunt.com:8443/tfs/EngAndTech/Applications/Project%20Control%20Tower/_git/ControlTowerFunctionalTest"
+  },
+  "keywords": [
+    "Selenium",
+    "Mocha",
+    "Chai",
+    "WebdriverIO"
+  ],
+  "bugs": {},
+  "dependencies": {
+    "chai": "^4.1.2",
+    "config": "^1.29.2",
+    "dotenv": "^4.0.0",
+    "mocha": "^4.1.0",
+    "moment": "^2.20.1",
+    "reflect-metadata": "^0.1.12",
+    "wdio-junit-reporter": "^0.3.1",
+    "wdio-mocha-framework": "^0.5.12",
+    "wdio-selenium-standalone-service": "^0.0.9",
+    "wdio-spec-reporter": "^0.1.3",
+    "webdriverio": "^4.10.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/config": "^0.0.33",
+    "@types/dotenv": "^4.0.2",
+    "@types/mocha": "^2.2.47",
+    "@types/node": "^8.5.9",
+    "@types/reflect-metadata": "0.0.5",
+    "@types/webdriverio": "^4.8.8",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2"
+  }
+}

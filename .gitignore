@@ -1,0 +1,17 @@
+
+# Things that should be installed locally
+dist/
+node_modules/
+.DS_Store
+.env
+.idea/
+
+# IDE related files
+# .vscode
+
+# Logs
+npm-debug.log
+
+# test results
+# results/screenshots
+results/
