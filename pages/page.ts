@@ -9,16 +9,6 @@ let user: User = require('config').get('DefaultUser') as User;
 export abstract class Page {
     public get url(): string { return user.url; }
 
-    public open(impersonation?: User): void {
-        if (impersonation) {
-            user = impersonation;
-        }
-
-        handleFirefoxProxy(user);
-        browser.url(this.url);
-        loginCAS(user);
-    }
-
     public maximize(): void {
         browser.windowHandleMaximize();
     }
